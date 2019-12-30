@@ -20,10 +20,10 @@
       <div class="circle_sm item_inset"></div>
       <div class="circle_sm item_inset"></div>
     </div>
-    <div class="circle tohover"></div>
+    <div class="tohover"></div>
   </div>
   <div>
-    <button class="button tohover">
+    <button class="button circle item">
       <i class="far fa-moon fa-4x icon"></i>
     </button>
   </div>
@@ -42,8 +42,8 @@
           $('.item').addClass('item_dark');
           $('.item').removeClass('item');
 
-          $(this).removeClass('tohover');
-          $(this).addClass('tohover_dark');
+          $(this).removeClass('item');
+          $(this).addClass('item_dark');
 
           $('.item_inset').css({
             'background-color': '#363636',
@@ -64,8 +64,8 @@
           $('.item_dark').addClass('item');
           $('.item_dark').removeClass('item_dark');
 
-          $(this).removeClass('tohover_dark');
-          $(this).addClass('tohover');
+          $(this).removeClass('item_dark');
+          $(this).addClass('item');
 
           $('.item_inset').css({
             'background-color': '#eeeeee',

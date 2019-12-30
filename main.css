@@ -7,13 +7,13 @@ html {
   box-shadow: 
     -12px -9px 20px 8px rgba(255, 255, 255, 1),
     12px 9px 18px 8px rgba(0, 0, 0, 0.12);
-  transition: transform 2000ms;
+  /* transition: transform 2000ms; */
 }
 
-.item:hover {
-  transform: rotate(360deg);
+/* .item:hover {
+  transform: rotate(45deg);
   transition: transform 2000ms;
-}
+} */
 
 .item_dark {
   background-color: #363636;
@@ -27,6 +27,19 @@ html {
   height: 200px;
   width: 200px;
   border-radius: 30px;
+}
+
+.box:hover {
+  animation: grow-up 1s infinite ease-in-out alternate;
+}
+
+@keyframes grow-up {
+  from {
+    width: 200px;
+  }
+  to {
+    width: 400px;
+  }
 }
 
 .circle {
@@ -88,8 +101,32 @@ html {
 }
 
 .tohover {
+  margin: 80px;
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
   background-color: #eeeeee;
-  transition: box-shadow 200ms ease-in-out;
+  animation: pulse 2000ms ease-in-out infinite alternate;
+  /* transition: all 800ms ease-in-out; */
+  /* transition: border-radius 1000ms ease-in-out; */
+}
+
+@keyframes pulse {
+  from {
+    margin: 80px;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+  }
+  to {
+    border-radius: 30px;
+    height: 200px;
+    width: 200px;
+    margin: 40px;
+    box-shadow: 
+    -12px -9px 20px 8px rgba(255, 255, 255, 1),
+    12px 9px 18px 8px rgba(0, 0, 0, 0.12);
+  }
 }
 
 .tohover_dark {
@@ -103,13 +140,6 @@ html {
     -12px -9px 20px 5px rgba(62, 62, 62),
     12px 9px 18px 5px rgba(0, 0, 0, 0.12);
   transition: box-shadow 500ms;
-}
-
-.tohover:hover {
-  box-shadow: 
-    -12px -9px 20px 8px rgba(255, 255, 255, 1),
-    12px 9px 18px 8px rgba(0, 0, 0, 0.12);
-    transition: box-shadow 500ms;
 }
 
 .tohover:active {
