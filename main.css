@@ -1,0 +1,127 @@
+html {
+  background-color: #eeeeee;
+}
+
+.item {
+  background-color: #eeeeee;
+  box-shadow: 
+    -12px -9px 20px 8px rgba(255, 255, 255, 1),
+    12px 9px 18px 8px rgba(0, 0, 0, 0.12);
+  transition: transform 2000ms;
+}
+
+.item:hover {
+  transform: rotate(360deg);
+  transition: transform 2000ms;
+}
+
+.item_dark {
+  background-color: #363636;
+  box-shadow: 
+    -12px -9px 20px 5px rgba(62, 62, 62),
+    12px 9px 18px 5px rgba(0, 0, 0, 0.12);
+}
+
+.box {
+  margin: 40px;
+  height: 200px;
+  width: 200px;
+  border-radius: 30px;
+}
+
+.circle {
+  margin: 40px;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+}
+
+.circle_sm {
+  margin: 40px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  box-shadow: 
+    inset -9px -9px 20px 8px rgba(255, 255, 255, 1),
+    inset 9px 9px 18px 8px rgba(0, 0, 0, 0.1);
+}
+
+.other {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  height: 200px;
+  width: 400px;
+  border-radius: 100px;
+}
+
+.button {
+  height: 100px;
+  width: 100px;
+  border: none;
+  outline: none;
+  margin-left: 500px;
+  border-radius: 50px;
+}
+
+.icon {
+  color: rgb(0, 0, 0);
+  text-shadow: 0px 0px 15px #000000;
+}
+
+.icon_dark {
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 15px #ffffff;
+}
+
+.item:active {
+  box-shadow: 
+    inset -9px -9px 20px 8px rgba(255, 255, 255, 1),
+    inset 9px 9px 18px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item_dark:active {
+  box-shadow: 
+    inset -9px -9px 20px 0 rgba(62, 62, 62),
+    inset 9px 9px 18px 0 rgba(0, 0, 0, 0.12);
+}
+
+.tohover {
+  background-color: #eeeeee;
+  transition: box-shadow 200ms ease-in-out;
+}
+
+.tohover_dark {
+  background-color: #363636;
+  transition: box-shadow 200ms ease-in-out;
+}
+
+.tohover_dark:hover {
+  background-color: #363636;
+  box-shadow: 
+    -12px -9px 20px 5px rgba(62, 62, 62),
+    12px 9px 18px 5px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 500ms;
+}
+
+.tohover:hover {
+  box-shadow: 
+    -12px -9px 20px 8px rgba(255, 255, 255, 1),
+    12px 9px 18px 8px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 500ms;
+}
+
+.tohover:active {
+  box-shadow: 
+    inset -9px -9px 20px 8px rgba(255, 255, 255, 1),
+    inset 9px 9px 18px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.tohover_dark:active {
+  box-shadow: 
+    -12px -9px 20px 5px rgba(62, 62, 62),
+    12px 9px 18px 5px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 200ms;
+}

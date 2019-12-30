@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/main.css">
+  <script src="https://kit.fontawesome.com/4fe01a73b5.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div style="display:inline-flex;">
+    <div class="box item"></div>
+    <div class="circle item"></div>
+    <div class="other item">
+      <div class="circle_sm item_inset"></div>
+      <div class="circle_sm item_inset"></div>
+    </div>
+    <div class="circle tohover"></div>
+  </div>
+  <div>
+    <button class="button tohover">
+      <i class="far fa-moon fa-4x icon"></i>
+    </button>
+  </div>
+
+
+  <script>
+    $(document).ready(() => {
+      let vibe = 'light';
+
+      $('button').click(function () {
+        if (vibe == 'light') {
+          $('html').css({
+            'background-color': '#363636'
+          })
+
+          $('.item').addClass('item_dark');
+          $('.item').removeClass('item');
+
+          $(this).removeClass('tohover');
+          $(this).addClass('tohover_dark');
+
+          $('.item_inset').css({
+            'background-color': '#363636',
+            'box-shadow':
+              'inset -9px -9px 20px 0 rgb(64, 64, 64), inset 9px 9px 18px 0 rgba(0, 0, 0, 0.1)'
+          })
+
+          $('.button i').removeClass('far fa-moon icon');
+          $('.button i').addClass('far fa-sun icon_dark');
+
+          vibe = 'dark'
+        } else {
+
+          $('html').css({
+            'background-color': '#eeeeee'
+          })
+
+          $('.item_dark').addClass('item');
+          $('.item_dark').removeClass('item_dark');
+
+          $(this).removeClass('tohover_dark');
+          $(this).addClass('tohover');
+
+          $('.item_inset').css({
+            'background-color': '#eeeeee',
+            'box-shadow':
+              'inset -9px -9px 20px 0 rgb(255, 255, 255, 1), inset 9px 9px 18px 0 rgba(0, 0, 0, 0.1)'
+          })
+
+          $('.button i').removeClass('far fa-sun icon_dark');
+          $('.button i').addClass('far fa-moon icon');
+
+          vibe = 'light'
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>
