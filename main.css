@@ -106,7 +106,7 @@ html {
   width: 100px;
   border-radius: 100px;
   background-color: #eeeeee;
-  animation: pulse 2000ms ease-in-out infinite alternate;
+  animation: pulse 1000ms ease-out infinite alternate;
   /* transition: all 800ms ease-in-out; */
   /* transition: border-radius 1000ms ease-in-out; */
 }
